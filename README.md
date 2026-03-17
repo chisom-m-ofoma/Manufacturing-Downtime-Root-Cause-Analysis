@@ -4,11 +4,11 @@
 
 Delcrone is a manufacturing company that uses Industrial Internet of Things (IoT) sensors to monitor machine health across its production facilities. Each factory contains multiple machine types that send telemetry data every 10 minutes.
 
-Recently, stakeholders observed production delays and operational inefficiencies caused by frequent disruptions on the assembly lines.
+Recently, stakeholders observed production delays and operational inefficiencies due to frequent disruptions on the assembly lines.
 
 The technology team collected and converted a month of IoT telemetry data from four production facilities to help identify the root cause of the downtime. 
 
-The goal of this analysis is to identify the primary source of assembly-line disruption and to provide insights to improve operational efficiency.
+The goal of this analysis is to identify the primary source of disruption and to provide insights to improve operational efficiency.
 
 ### Key Metrics
 - Which production facility experiences the highest machine downtime?
@@ -26,21 +26,20 @@ The telemetry dataset was explored using SQL to understand machine behavior acro
 - Calculating downtime events by facility
 - Identifying machine types responsible for the most failures
 
-[*Check Out Core SQL Queries*](XYZ)
+[*Check Out EDA and calculated fields*](sql/delcrone_root_cause_analysis.md)
 
 ## Insights
 
-*General Dashboard image*
+![*Delcrone downtime distribution across facility and machine contributors*](Dashboard/Delcrone_Dashboard.png)
 
-Analysis revealed that FACTORY A experiences the highest machine downtime across all facilities.
+Analysis revealed that **Seiko Facility** experiences the highest machine downtime across all facilities.
 
-Further investigation shows that DEVICE TYPE A is responsible for the majority of downtime events in this facility, making it the most significant contributor to assembly line disruptions.
+Further investigation shows that **LaserWelder** is responsible for the majority of downtime events in this facility, making it the most significant contributor to assembly line disruptions.
 
-This is shown in the dashboard below.
 
-*Filtered dashboard image*
+![*Seiko Facility with highest downtime and Laser welder machine most prone to failure*](Dashboard/delcrone_downtime_dashboard.png)
 
 ## Recommendations
-- Preventive maintenance efforts should prioritize DEVICE TYPE A MACHINES in FACTORY A.
+- Preventive maintenance efforts should prioritise LaserWelder in Seiko facility.
 - Monitor machine health trends weekly to detect early signs of failure.
 - Implement automated alerts for machines entering unhealthy states.
